@@ -2,6 +2,6 @@
 
 num = int(input("enter number: "))
 
-while num > 0:
+while num >= 0:
     print(num, end=" ")
     num -= 1
