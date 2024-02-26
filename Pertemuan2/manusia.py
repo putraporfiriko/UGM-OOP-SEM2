@@ -9,6 +9,6 @@ class manusia:
 
 # obj
         
-budi = manusia('Budi', 20)
+hakeem = manusia('Hakeem', 18)
 
-budi.showdata()
+hakeem.showdata()
