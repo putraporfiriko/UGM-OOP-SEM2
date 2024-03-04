@@ -1,5 +1,5 @@
-class Person(object):
-    def __init__(self,name):
+class Person(object): # CLASS
+    def __init__(self,name): # CONSTRUCTOR
         self.name = name
 
     def getname(self):
