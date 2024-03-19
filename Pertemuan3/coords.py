@@ -19,7 +19,7 @@ class coords3d(coords2d):
         print(f"z = {self.z}")
 
 point1 = coords3d(1, 2, 3)
-# point1.showcoords() 
+point1.showcoords() 
 
 #b;comment accordingly
 delattr(point1, 'z')
@@ -30,7 +30,7 @@ del point1.y
 print('del effect:')
 point1.showcoords()
 
-# #c;comment accordingly
+#c;comment accordingly
 del coords2d.y
 del point1.y
 print('del keyword effect:')

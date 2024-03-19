@@ -14,7 +14,7 @@ class mahasiswa(orang):
         self.matkul = []
 
     def enrol(self, mkname):
-        self.matkul.insert(mkname)
+        self.matkul.append(mkname)
 
 class karyawan(orang):
     statuslist = ("PERMANENT", "NONPERMANENT")
@@ -29,25 +29,27 @@ class dosen(karyawan):
         self.matkul_diajar = []
     
     def addmk(self, mkname):
-        self.matkul_diajar.insert(mkname)
+        self.matkul_diajar.append(mkname)
     
 class pelajar():
     def __init__(self):
         self.matkul = []
 
     def enrol(self, mkname):
-        self.matkul.insert(mkname)
+        self.matkul.append(mkname)
 
 class pengajar():
     def __init__(self):
         self.matkul_diajar = []
 
     def addmk(self, mkname):
-        self.matkul_diajar.insert(mkname)
+        self.matkul_diajar.append(mkname)
 
 class asdos(orang, pelajar, pengajar):
-    def __init__(self, nd: str, nb: str, id: int):
-        super().__init__(nd, nb, id)
+    def __init__(self, nd: str, nb: str, id: int, *args, **kwargs):
+        super().__init__(nd, nb, id,)
+        self.matkul = [] # read note 1
+        self.matkul_diajar = [] # read note 1
 
 # objects
 bowo = mahasiswa("Bowo", "Nugroho", 987654, mahasiswa.jenjanglist[0])
@@ -59,3 +61,10 @@ bowo.enrol("Basis Data")
 rizki.addmk("Statistik")
 uswatun.enrol("Big Data")
 uswatun.addmk("Kecerdasan Artifisial")
+
+
+
+
+
+# notes
+# 1. This is to avoid AttributeError: 'asdos' object has no attribute 'matkul', an attribute has to be initialized in the class even if it inherits from other classes. 

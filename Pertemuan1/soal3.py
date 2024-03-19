@@ -1,4 +1,5 @@
 import sys
+import numpy as np
 
 def niucheck():
     niu = int(input("Masukkan NIU: "))
@@ -11,7 +12,7 @@ def basescore():
     global ntugas, nlaporan
     ntugas = int(input("Masukkan nilai tugas: "))
     nlaporan = int(input("Masukkan nilai laporan: "))
-    baseavg = (ntugas + nlaporan) / 2
+    baseavg = np.average([ntugas, nlaporan])
     if baseavg < 40:
         print("K")
         sys.exit()
@@ -21,7 +22,7 @@ def basescore():
 def finalscore():
     global finalavg
     nujian = int(input("Masukkan nilai ujian: "))
-    finalavg = 0.25*ntugas + 0.25*nlaporan + 0.5*nujian
+    finalavg = np.average([np.average([ntugas, nlaporan]), nujian])
 
 def hurufoutput():
     if finalavg >= 80:

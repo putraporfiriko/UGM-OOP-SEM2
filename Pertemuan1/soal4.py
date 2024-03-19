@@ -3,6 +3,7 @@
 import sympy as sp
 
 num = int(input("input angka: "))
+## todo:
 
 flag = sp.isprime(num)
 
