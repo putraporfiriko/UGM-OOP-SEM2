@@ -1,9 +1,8 @@
-#Nadine
 from abc import ABC, abstractmethod
 import random
 
 class Hero(ABC):
-    def _init_(self, name, attack, hp) :
+    def __init__(self, name, attack, hp) :
         self.name = name
         self.attack = attack
         self.hp = hp

@@ -1,5 +1,3 @@
-# program with abstract base class
-
 from abc import ABC, abstractmethod
 
 class Shape(ABC):
