@@ -28,7 +28,7 @@ class Marksman(Hero) :
         print(f"{enemy.name} HP remains {enemy.hp}")
 
     def passive_skill(self) :
-                return 1.0 + random.random()
+                return 1.0 + random.rand    om()
             
     def ulti(self):
                 pass
